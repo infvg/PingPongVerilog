@@ -27,6 +27,6 @@ counter <= 0;
 else
 counter <= counter + 1;
 end
-assign clk1hz = (counter == 99999999);
+assign clk1hz = (counter == 33333333);
 
 endmodule

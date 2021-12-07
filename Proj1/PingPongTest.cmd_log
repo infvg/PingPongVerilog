@@ -1,0 +1,162 @@
+xst -intstyle ise -ifn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.xst" -ofn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 PingPongTest.ngc PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+xst -intstyle ise -ifn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.xst" -ofn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 PingPongTest.ngc PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 PingPongTest.ngc PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.xst" -ofn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 PingPongTest.ngc PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.xst" -ofn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 PingPongTest.ngc PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.xst" -ofn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 PingPongTest.ngc PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.xst" -ofn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.syr" 
+xst -intstyle ise -ifn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.xst" -ofn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 PingPongTest.ngc PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.xst" -ofn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 PingPongTest.ngc PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.xst" -ofn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 PingPongTest.ngc PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.xst" -ofn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 PingPongTest.ngc PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.xst" -ofn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 PingPongTest.ngc PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.xst" -ofn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 PingPongTest.ngc PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.xst" -ofn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 PingPongTest.ngc PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.xst" -ofn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 PingPongTest.ngc PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.xst" -ofn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 PingPongTest.ngc PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.xst" -ofn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 PingPongTest.ngc PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.xst" -ofn "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 PingPongTest.ngc PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.xst" -ofn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 "PingPongTest.ngc" PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.xst" -ofn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.syr" 
+xst -intstyle ise -ifn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.xst" -ofn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.syr" 
+xst -intstyle ise -ifn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.xst" -ofn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.syr" 
+xst -intstyle ise -ifn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.xst" -ofn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.syr" 
+xst -intstyle ise -ifn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.xst" -ofn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.syr" 
+xst -intstyle ise -ifn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.xst" -ofn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.syr" 
+xst -intstyle ise -ifn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.xst" -ofn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 "PingPongTest.ngc" PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.xst" -ofn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 "PingPongTest.ngc" PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.xst" -ofn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 "PingPongTest.ngc" PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.xst" -ofn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 "PingPongTest.ngc" PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.xst" -ofn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 "PingPongTest.ngc" PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.xst" -ofn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 "PingPongTest.ngc" PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.xst" -ofn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 "PingPongTest.ngc" PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.xst" -ofn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 "PingPongTest.ngc" PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 
+xst -intstyle ise -ifn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.xst" -ofn "F:/Users/inf/Desktop/uni/term 211/COE 203/Project/Proj1/PingPongTest.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PingPongTest.ucf -p xc6slx16-csg324-3 "PingPongTest.ngc" PingPongTest.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PingPongTest_map.ncd PingPongTest.ngd PingPongTest.pcf 
+par -w -intstyle ise -ol high -mt off PingPongTest_map.ncd PingPongTest.ncd PingPongTest.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PingPongTest.twx PingPongTest.ncd -o PingPongTest.twr PingPongTest.pcf -ucf PingPongTest.ucf 
+bitgen -intstyle ise -f PingPongTest.ut PingPongTest.ncd 

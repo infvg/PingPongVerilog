@@ -18,124 +18,178 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module PingPong(input clk, reset,D,P0,P1, output [7:0]seg, [3:0]an,output L1,L2,L3,L4,L5,L6);
+module PingPong(input clk, reset,D,P0,P1, output [7:0]seg, [3:0]an,output L1,L2,L3,L4,L5,L6,L7,L8);
 
 reg pl;
-parameter STATE0 = 3'd0, STATE1 = 3'd1,STATE2 = 3'd2,STATE3 = 3'd3,STATE4 = 3'd4,STATE5 = 3'd5,STATE6 = 3'd6;
+parameter STATE0 = 4'd0, STATE1 = 4'd1,STATE2 = 4'd2,STATE3 = 4'd3,STATE4 = 4'd4,STATE5 = 4'd5,STATE6 = 4'd6,STATE7 = 4'd7,STATE8 = 4'd8;
 
-reg[2:0] state, next_state;
+reg[3:0] state, next_state;
 reg [3:0]sc0,sc1;
-reg resetsc;
+reg resetsc,addToMin,addToMax;
 
-assign L1 = ~state[2] & ~state[1];
-assign L2 = ~state[2] & state[1] & ~state[0];
-assign L3 = ~state[2] & state[1] & state[0];
-assign L4 = state[2] & ~state[1] & ~state[0];
-assign L5 = state[2] & ~state[1] & state[0];
-assign L6 = state[2] & state[1] & ~state[0];
-DISP7SEG disp (clk, sc0,4'd0,4'd0,sc1,0,0,0,0,0,0,seg,an);
+assign L1 = (state==4'd1);
+assign L2 = (state==4'd2);
+assign L3 = (state==4'd3);
+assign L4 = (state==4'd4);
+assign L5 = (state==4'd5);
+assign L6 = (state==4'd6);
+assign L7 = (state==4'd7);
+assign L8 = (state==4'd8) | (state==4'd0);
+DISP7SEG disp (clk, sc0,D1,D2,sc1,text_mode,slow,medum,fast,wrong,error,seg,an);
+
+
+always @(posedge addToMin, posedge addToMax) 
+begin
+if(addToMin) begin
+sc0 <= sc0 + 1;
+end
+
+if(addToMax) begin
+sc1 <= sc1 + 1;
+end
+end
+
 always @(posedge clk,posedge reset) 
 	if(reset)
 	begin
 		state <= STATE0;
-		resetsc = 1;
 	end
 	else if(D)
 	begin
-		if(resetsc)
+		if(resetsc) begin
 		resetsc = 0;
+		end
+		
 		state <= next_state;
 	end
+	
 always @(state,P0,P1)
 begin
-case(state)
-STATE0:
-begin 
+	case(state)
+		STATE0:
+		begin 
 
-if(resetsc)
-sc0 <= 4'd0; sc1 <= 4'd0;
+			if(addToMin) 
+				begin
+				addToMin <= 0;
+				end
+			if(addToMax)
+				begin
+				addToMax <= 0;
+				end
+				
+			if(reset)
+				begin
+				sc0 <= 0; sc1 <= 0;
+				addToMin <= 0;
+				addToMax <= 0;
+				end
+			
+			
+			if(sc0 == 15 | sc1 == 15) begin
+				next_state = STATE0;
+				end
+			else begin
 
-if(sc0 == 4'hF | sc1 == 4'hF) begin
-next_state = STATE0;
-end
-else begin
+				if(P1) begin
+				pl = 1;
+				next_state = STATE7;
+				end
+				else next_state = STATE0;
+			end
+		end
 
-if(P1) begin
-pl = 1;
-next_state = STATE5;
-end
-else next_state = STATE0;
-end
-end
+		STATE1:
+		begin 
+		if(P0)
+			begin
+			pl = 0;
+			next_state = STATE2;
+			end
+		else begin
+			addToMax <= 1;
+			next_state = STATE0;
+			end
+		end
 
-STATE1:
-begin 
-if(P0)
-begin
-pl = 0;
-next_state = STATE2;
-end
-else begin
-sc1 <= sc1 + 1;
-next_state = STATE0;
-end
-end
+		STATE2:
+		begin 
+		if(pl) begin
+		if(P0) begin
+		addToMax <= 1;
+		next_state = STATE0;
+		end
+		else
+		next_state = STATE1;
+		end
+		else
+		next_state = STATE3;
+		end
 
-STATE2:
-begin 
-if(pl)
-if(P0) begin
-sc1 <= sc1 + 1;
-next_state = STATE0;
-end
-else
-next_state = STATE1;
-else
-next_state = STATE3;
-end
+		STATE3:
+		begin 
+		if(pl)
+		next_state = STATE2;
+		else
+		next_state = STATE4;
+		end
 
-STATE3:
-begin 
-if(pl)
-next_state = STATE2;
-else
-next_state = STATE4;
-end
+		STATE4:
+		begin 
+		if(pl)
+		next_state = STATE3;
+		else
+		next_state = STATE5;
+		end
 
-STATE4:
-begin 
-if(pl)
-next_state = STATE3;
-else
-next_state = STATE5;
-end
+		STATE5:
+		begin 
+		if(pl)
+		next_state = STATE4;
+		else
+		next_state = STATE6;
+		end
 
-STATE5:
-begin 
-if(pl)
-next_state = STATE4;
-else
-if(P1) begin
-sc0 <= sc0 + 1;
-next_state = STATE0;
-end
-else begin
-next_state = STATE6;
-end
-end
+		STATE6:
+		begin 
+		if(pl)
+		next_state = STATE5;
+		else
+		next_state = STATE7;
+		end
 
-STATE6:
-begin 
-if(P1) begin
-pl = 1;
-next_state = STATE5;
-end
-else begin
-sc0 <= sc0 + 1;
-next_state = STATE0;
-end
-end
+		STATE7:
+		begin
 
-endcase
+		if(pl)
+		next_state = STATE6;
+		else begin
+
+		if(P1) begin
+
+		addToMin <= 1;
+		next_state = STATE0;
+
+		end
+		else 
+		next_state = STATE8;
+
+		end
+		end
+
+		STATE8:
+		begin 
+		if(P1) begin
+		pl = 1;
+		next_state = STATE7;
+
+		end
+		else begin
+		addToMin <= 1;
+		next_state = STATE0;
+		end
+		end
+
+	endcase
 end
 endmodule

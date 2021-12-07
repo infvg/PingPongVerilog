@@ -18,11 +18,11 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module PingPongTest(input clk, reset,P1,P2,D1,D2, output [7:0]seg, [3:0]an,output L1,L2,L3,L4,L5,L6);
+module PingPongTest(input clk, reset,P1,P2,D1,D2, output [7:0]seg, [3:0]an,output L1,L2,L3,L4,L5,L6,L7,L8);
 
-assign D = D2 ? (D1 ? clk2hz : clk3hz) : (clk1hz); 
+assign D = D2 ? (D1 ? clk3hz : clk2hz) : (clk1hz); 
 
-PingPong p (clk,reset,D,P1,P2,seg,an,L1,L2,L3,L4,L5,L6);
+PingPong p (clk,reset,D,P1,P2,seg,an,L1,L2,L3,L4,L5,L6,L7,L8);
 
 OneHZ h1(clk,reset,clk1hz);
 TwoHZ h2(clk,reset,clk2hz);

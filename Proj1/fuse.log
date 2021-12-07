@@ -1,0 +1,25 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPong_isim_beh.exe -prj C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPong_beh.prj work.PingPong work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/DISP7SEG.v" into library work
+Analyzing Verilog file "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPong.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:189 - "C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPong.v" Line 38: Size mismatch in connection of port <text_mode>. Formal port size is 1-bit while actual signal size is 32-bit.
+Completed static elaboration
+Compiling module bcd7seg
+Compiling module slowclock
+Compiling module my_counter
+Compiling module mux4to1
+Compiling module decoder2to4
+Compiling module DISP7SEG
+Compiling module PingPong
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 5 sub-compilation(s) to finish...
+Compiled 8 Verilog Units
+Built simulation executable C:/Users/COE/Downloads/Exp10_202040880_Sec54/lab11/Proj1/Proj1/PingPong_isim_beh.exe
+Fuse Memory Usage: 29056 KB
+Fuse CPU Usage: 624 ms
