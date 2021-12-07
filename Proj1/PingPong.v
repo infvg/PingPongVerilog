@@ -43,8 +43,11 @@ begin
 if(addToMin) begin
 sc0 <= sc0 + 1;
 end
+end
 
-if(addToMax) begin
+always @(posedge addToMax)
+begin
+ if(addToMax) begin
 sc1 <= sc1 + 1;
 end
 end
@@ -164,7 +167,6 @@ begin
 		if(pl)
 		next_state = STATE6;
 		else begin
-
 		if(P1) begin
 
 		addToMin <= 1;

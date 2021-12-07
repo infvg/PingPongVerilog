@@ -2,28 +2,28 @@ Command line:
    PingPong_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  50221
+     -socket  64591
 
-Mon Dec 06 14:54:00 2021
+Tue Dec 07 13:09:16 2021
 
 
- Elaboration Time: 0.0625 sec
+ Elaboration Time: 0.015625 sec
 
- Current Memory Usage: 5149.97 Meg
+ Current Memory Usage: 5151.36 Meg
 
- Total Signals          : 76
- Total Nets             : 302
- Total Signal Drivers   : 53
+ Total Signals          : 84
+ Total Nets             : 116
+ Total Signal Drivers   : 45
  Total Blocks           : 8
  Total Primitive Blocks : 6
- Total Processes        : 48
- Total Traceable Variables  : 38
- Total Scalar Nets and Variables : 477
-Total Line Count : 122
+ Total Processes        : 41
+ Total Traceable Variables  : 40
+ Total Scalar Nets and Variables : 293
+Total Line Count : 152
 
- Total Simulation Time: 0.8125 sec
+ Total Simulation Time: 3.29688 sec
 
- Current Memory Usage: 4992.68 Meg
+ Current Memory Usage: 4679.5 Meg
 
-Mon Dec 06 14:55:00 2021
+Tue Dec 07 13:15:33 2021
 
