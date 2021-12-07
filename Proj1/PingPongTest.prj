@@ -1,6 +1,0 @@
-verilog work "DISP7SEG.v"
-verilog work "TwoHZ.v"
-verilog work "ThreeHZ.v"
-verilog work "PingPong.v"
-verilog work "OneHZ.v"
-verilog work "PingPongTest.v"
