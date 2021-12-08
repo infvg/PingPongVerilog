@@ -25,7 +25,7 @@ parameter STATE0 = 4'd0, STATE1 = 4'd1,STATE2 = 4'd2,STATE3 = 4'd3,STATE4 = 4'd4
 
 reg[3:0] state, next_state;
 reg [3:0]sc0,sc1;
-reg resetsc,addToMin,addToMax;
+reg addToMin,addToMax;
 
 assign L1 = (state==4'd1);
 assign L2 = (state==4'd2);
@@ -35,34 +35,22 @@ assign L5 = (state==4'd5);
 assign L6 = (state==4'd6);
 assign L7 = (state==4'd7);
 assign L8 = (state==4'd8) | (state==4'd0);
+
 DISP7SEG disp (clk, sc0,D1,D2,sc1,text_mode,slow,medum,fast,wrong,error,seg,an);
 
 
-always @(posedge addToMin, posedge addToMax) 
-begin
-if(addToMin) begin
-sc0 <= sc0 + 1;
-end
-end
-
-always @(posedge addToMax)
-begin
- if(addToMax) begin
-sc1 <= sc1 + 1;
-end
-end
 
 always @(posedge clk,posedge reset) 
 	if(reset)
 	begin
 		state <= STATE0;
+		sc0 <= 0;
+		sc1 <= 0;
 	end
 	else if(D)
 	begin
-		if(resetsc) begin
-		resetsc = 0;
-		end
-		
+		sc0 <= sc0 + addToMin;
+		sc1 <= sc1 + addToMax;
 		state <= next_state;
 	end
 	
@@ -71,29 +59,14 @@ begin
 	case(state)
 		STATE0:
 		begin 
-
-			if(addToMin) 
-				begin
-				addToMin <= 0;
-				end
-			if(addToMax)
-				begin
-				addToMax <= 0;
-				end
-				
-			if(reset)
-				begin
-				sc0 <= 0; sc1 <= 0;
-				addToMin <= 0;
-				addToMax <= 0;
-				end
 			
+			addToMin <= 0;
+			addToMax <= 0;
 			
 			if(sc0 == 15 | sc1 == 15) begin
 				next_state = STATE0;
 				end
 			else begin
-
 				if(P1) begin
 				pl = 1;
 				next_state = STATE7;
@@ -107,10 +80,13 @@ begin
 		if(P0)
 			begin
 			pl = 0;
+			addToMax <= 0;
+			addToMin <= 0;
 			next_state = STATE2;
 			end
 		else begin
 			addToMax <= 1;
+			addToMin <= 0;
 			next_state = STATE0;
 			end
 		end
@@ -120,13 +96,20 @@ begin
 		if(pl) begin
 		if(P0) begin
 		addToMax <= 1;
+		addToMin <= 0;
 		next_state = STATE0;
 		end
-		else
+		else begin
+		addToMax <= 0;
+		addToMin <= 0;
 		next_state = STATE1;
 		end
-		else
+		end
+		else begin 
+		addToMax <= 0;
+		addToMin <= 0;
 		next_state = STATE3;
+		end
 		end
 
 		STATE3:
@@ -170,12 +153,17 @@ begin
 		if(P1) begin
 
 		addToMin <= 1;
+		addToMax <= 0;
 		next_state = STATE0;
 
 		end
-		else 
+		else begin
+		
+		addToMax <= 0;
+		addToMin <= 0;
 		next_state = STATE8;
 
+		end
 		end
 		end
 
@@ -183,11 +171,14 @@ begin
 		begin 
 		if(P1) begin
 		pl = 1;
+		addToMax <= 0;
+		addToMin <= 0;
 		next_state = STATE7;
 
 		end
 		else begin
 		addToMin <= 1;
+		addToMax <= 0;
 		next_state = STATE0;
 		end
 		end
