@@ -36,16 +36,18 @@ assign L6 = (state==4'd6);
 assign L7 = (state==4'd7);
 assign L8 = (state==4'd8) | (state==4'd0);
 
-DISP7SEG disp (clk, sc0,D1,D2,sc1,text_mode,slow,medum,fast,wrong,error,seg,an);
+reg gameStart;
+
+DISP7SEG disp (clk, sc1,D1,D2,sc0,text_mode,slow,medum,fast,wrong,error,seg,an);
 
 
 
 always @(posedge clk,posedge reset) 
 	if(reset)
 	begin
-		state <= STATE0;
 		sc0 <= 0;
 		sc1 <= 0;
+		state <= STATE0;
 	end
 	else if(D)
 	begin
@@ -68,7 +70,7 @@ begin
 				end
 			else begin
 				if(P1) begin
-				pl = 1;
+				pl <= 1;
 				next_state = STATE7;
 				end
 				else next_state = STATE0;
@@ -79,7 +81,7 @@ begin
 		begin 
 		if(P0)
 			begin
-			pl = 0;
+			pl <= 0;
 			addToMax <= 0;
 			addToMin <= 0;
 			next_state = STATE2;
@@ -146,7 +148,12 @@ begin
 
 		STATE7:
 		begin
-
+		if(gameStart) begin
+		gameStart = 0;
+		pl <= 1;
+		next_state = STATE6;
+		end 
+		else 
 		if(pl)
 		next_state = STATE6;
 		else begin
@@ -170,7 +177,7 @@ begin
 		STATE8:
 		begin 
 		if(P1) begin
-		pl = 1;
+		pl <= 1;
 		addToMax <= 0;
 		addToMin <= 0;
 		next_state = STATE7;

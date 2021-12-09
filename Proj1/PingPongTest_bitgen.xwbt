@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=F:\Users\inf\Desktop\uni\term 211\COE 203\Project\Proj1\PingPongTest.ncd
-OUTFILE=F:\Users\inf\Desktop\uni\term 211\COE 203\Project\Proj1\PingPongTest.bit
+INFILE=C:\Users\COE\Documents\Proj1\PingPongTest.ncd
+OUTFILE=C:\Users\COE\Documents\Proj1\PingPongTest.bit
 FAMILY=Spartan6
 PART=xc6slx16-3csg324
-WORKINGDIR=F:\Users\inf\Desktop\uni\term 211\COE 203\Project\Proj1
+WORKINGDIR=C:\Users\COE\Documents\Proj1
 LICENSE=WebPack
 USER_INFO=210828762_0_0_516
